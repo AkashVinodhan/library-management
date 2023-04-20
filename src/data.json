@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Turtles All the way Down",
+    "author": "John Green",
+    "image": "https://m.media-amazon.com/images/I/81cAi-RIjcL.jpg",
+    "description": "The story centers on 16-year-old Aza Holmes, an American high school student with OCD and anxiety, and her search for a fugitive billionaire who happens to be a neighbor's father.",
+    "id": "1"
+  },
+  {
+    "name": "Paper Towns",
+    "author": "John Green",
+    "image": "https://m.media-amazon.com/images/I/81WBJQUEFsL.jpg",
+    "description": "The novel is about the coming-of-age of the protagonist, Quentin Q Jacobsen and his search for Margo Roth Spiegelman, his neighbor and childhood sweetheart.",
+    "id": "2"
+  },
+  {
+    "name": "The Perks of Being a Wallflower",
+    "author": "Stephen Chbosky",
+    "image": "https://m.media-amazon.com/images/I/81KlArt9FzL._AC_UF1000,1000_QL80_.jpg",
+    "description": "Set in the early 1990s, the novel follows Charlie, an introverted and observant child, through his freshman year of high school in a Pittsburgh suburb",
+    "id": "3"
+  },
+  {
+    "name": "Looking for Alaska",
+    "author": "John Green",
+    "image": "https://m.media-amazon.com/images/I/91nTClkODkL.jpg",
+    "description": "Based on his time at Indian Springs School, Green wrote the novel as a result of his desire to create meaningful young adult fiction.",
+    "id": "4"
+  },
+  {
+    "name": "Echo Burning",
+    "author": "Lee Child",
+    "image": "https://m.media-amazon.com/images/I/51cSGghtlsL._SX319_BO1,204,203,200_.jpg",
+    "description": "Jack Reacher, adrift in the hellish heat of a Texas summer. Looking for a lift through the vast empty landscape. A woman stops, and offers a ride",
+    "id": "5"
+  },
+  {
+    "name": "The Enemy",
+    "author": "Lee Child",
+    "image": "https://m.media-amazon.com/images/I/715RFSA3BLL.jpg",
+    "description": "Somewhere inside the vast worldwide fortress that is the U.S. Army, Reacher is being set up as a fall guy with the worst enemies a man can have. But Reacher won't quit. He's fighting a new kind of war—against an enemy he didn't know he had.",
+    "id": "6"
+  }
+]

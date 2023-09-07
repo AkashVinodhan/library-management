@@ -18,6 +18,7 @@ const Navbar = () => {
           Library management
         </Typography>
         <LibraryBooksOutlinedIcon
+          onClick={() => nav("/")}
           fontSize="large"
           sx={{ color: "white", display: { xs: "block", sm: "none" } }}
         />

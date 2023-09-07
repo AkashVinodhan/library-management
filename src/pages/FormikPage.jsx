@@ -13,11 +13,16 @@ const MyInputs = styled(TextField)({
 const FormikPage = () => {
   const { id } = useParams();
   const nav = useNavigate();
-  const [fields, setFields] = useState([]);
+  const [fields, setFields] = useState({
+    name: "",
+    author: "",
+    description: "",
+    image: "",
+  });
 
   useEffect(() => {
     if (id) {
-      fetch("https://64340404582420e231718e94.mockapi.io/books/" + id)
+      fetch("https://library-management-cwwq.onrender.com/api/books/" + id)
         .then((res) => res.json())
         .then((data) => {
           setFields(data);
@@ -49,21 +54,26 @@ const FormikPage = () => {
 
     onSubmit: (values) => {
       if (id) {
-        fetch("https://64340404582420e231718e94.mockapi.io/books/" + id, {
+        fetch("https://library-management-cwwq.onrender.com/api/books/" + id, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(values),
-        }).then((res) => formik.resetForm());
+        }).then((res) => {
+          formik.resetForm();
+          nav("/");
+        });
       } else {
-        fetch("https://64340404582420e231718e94.mockapi.io/books", {
+        fetch("https://library-management-cwwq.onrender.com/api/books", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(values),
-        }).then((res) => formik.resetForm());
+        }).then((res) => {
+          formik.resetForm();
+        });
       }
     },
   });

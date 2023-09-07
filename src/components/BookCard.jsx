@@ -18,7 +18,7 @@ const BookCard = () => {
   const [books, setBooks] = useState([]);
 
   const fetchBooks = () => {
-    fetch("https://64340404582420e231718e94.mockapi.io/books")
+    fetch("https://library-management-cwwq.onrender.com/api/books")
       .then((res) => res.json())
       .then((data) => setBooks(data));
   };
@@ -30,15 +30,15 @@ const BookCard = () => {
     nav("/" + id);
   };
   const handleCheckout = (id) => {
-    fetch("https://64340404582420e231718e94.mockapi.io/books/" + id, {
+    fetch("https://library-management-cwwq.onrender.com/api/books/" + id, {
       method: "DELETE",
     }).then((res) => fetchBooks());
   };
 
   return (
     <Grid container spacing={5} justifyContent="center" marginTop={3}>
-      {books.map(({ name, author, image, description, id }) => (
-        <Grid item key={id}>
+      {books.map(({ name, author, image, description, _id }) => (
+        <Grid item key={_id}>
           <Card
             sx={{
               maxWidth: 345,
@@ -65,7 +65,7 @@ const BookCard = () => {
               <Button
                 size="small"
                 variant="contained"
-                onClick={() => handleEdit(id)}
+                onClick={() => handleEdit(_id)}
                 startIcon={<EditOutlinedIcon />}
               >
                 Edit
@@ -74,7 +74,7 @@ const BookCard = () => {
                 size="small"
                 variant="outlined"
                 color="success"
-                onClick={() => handleCheckout(id)}
+                onClick={() => handleCheckout(_id)}
                 endIcon={<ShoppingCartCheckoutOutlinedIcon />}
               >
                 Checkout
